@@ -1,7 +1,5 @@
 #pragma once
-#include "Core.h"
-#include "Application.h"
-#include <memory>
+
 
 #ifdef ANACARDIA_PLATFORM_WINDOWS
 
