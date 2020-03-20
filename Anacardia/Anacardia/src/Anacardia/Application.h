@@ -10,5 +10,7 @@ namespace ANACARDIA
 		virtual ~Application();
 
 		void Run();
+
 	};
+	Application* CreateApplication();
 }

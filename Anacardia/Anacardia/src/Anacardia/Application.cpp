@@ -12,5 +12,5 @@ ANACARDIA::Application::~Application()
 
 void ANACARDIA::Application::Run()
 {
-
+	while (true);
 }
