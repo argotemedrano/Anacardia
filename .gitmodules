@@ -1,0 +1,3 @@
+[submodule "Anacardia/Anacardia/vendor/spdlog"]
+	path = Anacardia/Anacardia/vendor/spdlog
+	url = git@github.com:gabime/spdlog.git
