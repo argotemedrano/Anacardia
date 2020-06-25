@@ -56,6 +56,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ANACARDIA_PLATFORM_WINDOWS;ACAR_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Anacardia/vendor/spdlog/include/</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -70,6 +73,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Anacardia/vendor/spdlog/include/</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,13 +85,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Anacardia\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Anacardia\Events\Event.h" />
+    <ClInclude Include="src\Anacardia\Events\KeyEvent.h" />
+    <ClInclude Include="src\Anacardia\Events\MouseEvent.h" />
+    <ClInclude Include="src\Anacardia\Log.h" />
     <ClInclude Include="src\Anacardia.h" />
     <ClInclude Include="src\Anacardia\Application.h" />
     <ClInclude Include="src\Anacardia\Core.h" />
     <ClInclude Include="src\Anacardia\EntryPoint.h" />
+    <ClInclude Include="src\Anacardia\pch.h" />
+    <ClInclude Include="src\Anacardia\Window.h" />
+    <ClInclude Include="src\Anacardia\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Anacardia\Log.cpp" />
     <ClCompile Include="src\Anacardia\Application.cpp" />
+    <ClCompile Include="src\Anacardia\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Anacardia\WindowsWindow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

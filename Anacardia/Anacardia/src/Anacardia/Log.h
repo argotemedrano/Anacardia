@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Core.h"
-#include "spdlog\spdlog.h"
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 #include <memory>
 
 namespace Anacardia
