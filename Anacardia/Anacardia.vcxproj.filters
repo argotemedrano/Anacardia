@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Anacardia">
+      <UniqueIdentifier>{59F3D922-C55D-8E99-0E9C-3F3F7A456CEE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Anacardia\Events">
+      <UniqueIdentifier>{1D4123C0-093A-4212-326C-27971EC4211E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Anacardia.h" />
+    <ClInclude Include="src\Anacardia\Application.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Core.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\EntryPoint.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Events\ApplicationEvent.h">
+      <Filter>Anacardia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Events\Event.h">
+      <Filter>Anacardia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Events\KeyEvent.h">
+      <Filter>Anacardia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Events\MouseEvent.h">
+      <Filter>Anacardia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Log.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Window.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\WindowsWindow.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\pch.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Anacardia\Application.cpp">
+      <Filter>Anacardia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Anacardia\Log.cpp">
+      <Filter>Anacardia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Anacardia\WindowsWindow.cpp">
+      <Filter>Anacardia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Anacardia\pch.cpp">
+      <Filter>Anacardia</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
