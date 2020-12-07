@@ -3,12 +3,12 @@
 
 #ifdef ANACARDIA_PLATFORM_WINDOWS
 
-extern ANACARDIA::Application* ANACARDIA::CreateApplication();
+extern Anacardia::Application* Anacardia::CreateApplication();
 
 int main(int argc, char* argv[])
 {
 	Anacardia::Log::Init();
-	ANACARDIA::Application* app = ANACARDIA::CreateApplication();
+	Anacardia::Application* app = Anacardia::CreateApplication();
 	app->Run();
 	delete app;
 }

@@ -7,12 +7,11 @@ workspace "Anacardia"
 		"Release",
 		"Dist"
 	}
-
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "Anacardia/vendor/GLFW/include"
+IncludeDir["GLFW"] = "vendor/GLFW/include"
 
 include "vendor/GLFW"
 
@@ -36,14 +35,15 @@ project "Anacardia"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/Platform/Windows",
+		"vendor/spdlog/include",
 		"%{IncludeDir.GLFW}"
 	}
 
 	links
 	{
-		"GFLW",
-		"openg132.lib"
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -90,7 +90,7 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Anacardia/vendor/spdlog/include",
+		"vendor/spdlog/include",
 		"Anacardia/src"
 	}
 
@@ -109,10 +109,6 @@ project "Sandbox"
 			"ANACARDIA_PLATFORM_WINDOWS"
 		}
 
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
-		}
 		
 	filter "configurations:Debug"
 		defines "ACAR_DEBUG"

@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
-#include "Window.h"
-#include "GFLW/gflw3.h"
+#include "Anacardia/Window.h"
+#include "GLFW/glfw3.h"
 
 namespace Anacardia
 {
@@ -23,7 +23,9 @@ namespace Anacardia
 	private:
 		void Init(const WindowProps& props);
 		void Shutdown();
-		GFLWwindow* m_Window;
+
+		GLFWwindow* m_Window;
+
 		struct WindowData
 		{
 			std::string Title;
@@ -34,5 +36,6 @@ namespace Anacardia
 		WindowData m_Data;
 
 	};
+
 }
 

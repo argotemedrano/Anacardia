@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core.h"
+#include "Core.h"
 
 #include <string>
 #include <functional>
@@ -9,9 +9,9 @@ namespace Anacardia
 {
 
 	// Events are currently blocking, meaning when an event occurs it
-	// immediately gets dispatched and must be dealt with right then an there.
+	// immediately gets dispatched and must be dealt with right then and there.
 	// For the future, a better strategy might be to buffer events in an event
-	// bus and process them during the "event" part of the update stage.
+	// queue and process them during the "event" part of the update stage.
 
 	enum class EventType
 	{
@@ -43,9 +43,9 @@ namespace Anacardia
 		friend class EventDispatcher;
 	public:
 		virtual EventType GetEventType() const = 0;
-		virtual const char* GetName() const = 0;
+		virtual const char* GetName() const = 0; // DEBUG ONLY
 		virtual int GetCategoryFlags() const = 0;
-		virtual std::string ToString() const { return GetName(); }
+		virtual std::string ToString() const { return GetName(); } // DEBUG ONLY
 
 		inline bool IsInCategory(EventCategory category)
 		{
@@ -71,7 +71,7 @@ namespace Anacardia
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handeled = *(&T::Handeled());
+				m_Event.m_Handeled = func(*(T*)(&m_Event));
 				return true;
 			}
 			return false;

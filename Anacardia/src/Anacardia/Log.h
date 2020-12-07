@@ -25,6 +25,7 @@ namespace Anacardia
 #define ANACARDIA_CORE_WARN(...)     ::Anacardia::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define ANACARDIA_CORE_ERROR(...)    ::Anacardia::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define ANACARDIA_CORE_FATAL(...)    ::Anacardia::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+//#define	ANACARDIA_CORE_ASSERT(x, success, failure) if(!x) ANACARDIA_CORE_ERROR(failure); else ANACARDIA_CORE_TRACE(success); __debugbreak
 
 // Client Log Macros
 #define ANACARDIA_TRACE(...)    ::Anacardia::Log::GetClientLogger()->trace(__VA_ARGS__)

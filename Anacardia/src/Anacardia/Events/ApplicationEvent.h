@@ -16,15 +16,15 @@ namespace Anacardia
 		inline unsigned int GetWidth() const { return m_Width; }
 		inline unsigned int GetHeight() const { return m_Height; }
 		
-		std::string ToString() const
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "WindowsResizeEvent: " << m_Width << ", " << m_Height;
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(WindowResize)
-		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_TYPE(EventType::WindowResize)
+		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 	private:
 		unsigned int m_Height, m_Width;
 	};
@@ -33,8 +33,8 @@ namespace Anacardia
 	{
 	public:
 		WindowCloseEvent() { }
-		EVENT_CLASS_TYPE(WindowClose)
-		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_TYPE(EventType::WindowClose)
+		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 	private:
 		
 	};
@@ -43,23 +43,23 @@ namespace Anacardia
 	{
 	public:
 		AppTickEvent() { }
-		EVENT_CLASS_TYPE(AppTick)
-		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_TYPE(EventType::AppTick)
+		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 	};
 
 	class ANACARDIA_API AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() { }
-		EVENT_CLASS_TYPE(AppUpdate)
-		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_TYPE(EventType::AppUpdate)
+		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 	};
 
 	class ANACARDIA_API AppRenderEvent : public Event
 	{
 	public:
 		AppRenderEvent() { }
-		EVENT_CLASS_TYPE(AppRender)
-		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_TYPE(EventType::AppRender)
+		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 	};
 }

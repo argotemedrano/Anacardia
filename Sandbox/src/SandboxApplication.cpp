@@ -1,6 +1,6 @@
 #include <Anacardia.h>
 
-class Sandbox : public ANACARDIA::Application
+class Sandbox : public Anacardia::Application
 {
 public:
 	Sandbox()
@@ -13,7 +13,7 @@ public:
 	}
 };
 
-ANACARDIA::Application* ANACARDIA::CreateApplication()
+Anacardia::Application* Anacardia::CreateApplication()
 {
 	return new Sandbox();
 }

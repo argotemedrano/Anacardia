@@ -4,17 +4,23 @@
 #include "Events/ApplicationEvent.h"
 #include "Log.h"
 
-ANACARDIA::Application::Application()
+Anacardia::Application::Application()
+{
+	//Anacardia::Log::Init();
+	m_Window = std::unique_ptr<Window>(Window::Create());
+}
+
+Anacardia::Application::~Application()
 {
 
 }
 
-ANACARDIA::Application::~Application()
+void Anacardia::Application::Run()
 {
-
-}
-
-void ANACARDIA::Application::Run()
-{
-	while (true);
+	ANACARDIA_CORE_INFO("Started Anacardia Core Logger: ", Anacardia::Log::GetCoreLogger()->name());
+	ANACARDIA_INFO("Started Anacardia Client Logger: ", Anacardia::Log::GetClientLogger()->name());
+	while (m_Running)
+	{
+		m_Window->OnUpdate();
+	}
 }
