@@ -30,7 +30,7 @@ namespace Anacardia
 		}
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
-		EVENT_CLASS_TYPE(MouseMovedEvent);
+		EVENT_CLASS_TYPE(MouseMoved);
 	private:
 		float m_MouseX, m_MouseY;
 	};
@@ -58,7 +58,7 @@ namespace Anacardia
 		}
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
-		EVENT_CLASS_TYPE(MouseScrolledEvent);
+		EVENT_CLASS_TYPE(MouseScrolled);
 	private:
 		float m_OffsetX, m_OffsetY;
 	};
@@ -66,7 +66,7 @@ namespace Anacardia
 	class ANACARDIA_API MouseButtonEvent : public Event
 	{
 	public:
-		MouseButtonEvent() { }
+		MouseButtonEvent(int button) { }
 
 		std::string ToString() const override
 		{
@@ -76,13 +76,14 @@ namespace Anacardia
 		}
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
-		EVENT_CLASS_TYPE(MouseButtonEvent);
+	protected:
+		int m_Button;
 	};
 
 	class ANACARDIA_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonPressedEvent() { }
+		MouseButtonPressedEvent(int button) : MouseButtonEvent(button) { }
 
 		std::string ToString() const override
 		{
@@ -91,12 +92,13 @@ namespace Anacardia
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonPressedEvent);
+		EVENT_CLASS_TYPE(MouseButtonPressed);
 	};
 
 	class ANACARDIA_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
-		MouseButtonReleasedEvent() { }
+	public:
+		MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) { }
 
 		std::string ToString() const override
 		{
@@ -105,6 +107,6 @@ namespace Anacardia
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonReleasedEvent);
+		EVENT_CLASS_TYPE(MouseButtonReleased);
 	};
 }

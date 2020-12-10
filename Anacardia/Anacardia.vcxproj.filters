@@ -37,6 +37,8 @@
     <ClInclude Include="src\Core.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\Anacardia\WindowsWindow.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Anacardia\Application.cpp">
@@ -49,5 +51,7 @@
       <Filter>Anacardia</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="LayerStack.cpp" />
   </ItemGroup>
 </Project>

@@ -23,7 +23,7 @@ namespace Anacardia
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(EventType::WindowResize)
+		EVENT_CLASS_TYPE(WindowResize)
 		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
 	private:
 		unsigned int m_Height, m_Width;
@@ -33,8 +33,8 @@ namespace Anacardia
 	{
 	public:
 		WindowCloseEvent() { }
-		EVENT_CLASS_TYPE(EventType::WindowClose)
-		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
+		EVENT_CLASS_TYPE(WindowClose)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	private:
 		
 	};
@@ -43,23 +43,23 @@ namespace Anacardia
 	{
 	public:
 		AppTickEvent() { }
-		EVENT_CLASS_TYPE(EventType::AppTick)
-		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
+		EVENT_CLASS_TYPE(AppTick)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
 	class ANACARDIA_API AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() { }
-		EVENT_CLASS_TYPE(EventType::AppUpdate)
-		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
+		EVENT_CLASS_TYPE(AppUpdate)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
 	class ANACARDIA_API AppRenderEvent : public Event
 	{
 	public:
 		AppRenderEvent() { }
-		EVENT_CLASS_TYPE(EventType::AppRender)
-		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryApplication)
+		EVENT_CLASS_TYPE(AppRender)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 }

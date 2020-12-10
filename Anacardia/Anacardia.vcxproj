@@ -149,6 +149,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="LayerStack.h" />
     <ClInclude Include="src\Anacardia.h" />
     <ClInclude Include="src\Anacardia\Application.h" />
     <ClInclude Include="src\Anacardia\EntryPoint.h" />
@@ -163,6 +165,8 @@
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="LayerStack.cpp" />
     <ClCompile Include="src\Anacardia\Application.cpp" />
     <ClCompile Include="src\Anacardia\Log.cpp" />
     <ClCompile Include="src\Anacardia\WindowsWindow.cpp" />
