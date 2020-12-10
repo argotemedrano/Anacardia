@@ -12,8 +12,14 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "vendor/GLFW/include"
+IncludeDir["Glad"] = "vendor/Glad/include"
+IncludeDir["imgui"] = "vendor/imgui/include"
+IncludeDir["glm"] = "vendor/glm/glm"
+IncludeDir["spdlog"] = "vendor/spdlog/include"
 
 include "vendor/GLFW"
+include "vendor/Glad"
+include "vendor/imgui"
 
 project "Anacardia"
 	location "Anacardia"
@@ -36,14 +42,19 @@ project "Anacardia"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/Platform/Windows",
-		"vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.imgui}"
 	}
 
 	links
 	{
 		"GLFW",
-		"opengl32.lib"
+		"opengl32.lib",
+		"imgui",
+		"Glad"
 	}
 
 	filter "system:windows"
