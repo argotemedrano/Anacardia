@@ -156,13 +156,17 @@
     <ClInclude Include="src\Anacardia\Events\Event.h" />
     <ClInclude Include="src\Anacardia\Events\KeyEvent.h" />
     <ClInclude Include="src\Anacardia\Events\MouseEvent.h" />
+    <ClInclude Include="src\Anacardia\Input.h" />
     <ClInclude Include="src\Anacardia\Log.h" />
     <ClInclude Include="src\Anacardia\Window.h" />
     <ClInclude Include="src\Anacardia\WindowsWindow.h" />
     <ClInclude Include="src\Core.h" />
+    <ClInclude Include="src\KeyCodes.h" />
     <ClInclude Include="src\Layer.h" />
     <ClInclude Include="src\LayerStack.h" />
+    <ClInclude Include="src\MouseButtonCodes.h" />
     <ClInclude Include="src\pch.h" />
+    <ClInclude Include="WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Anacardia\Application.cpp" />
@@ -173,6 +177,7 @@
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="WindowsInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vendor\GLFW\GLFW.vcxproj">

@@ -19,7 +19,9 @@
 #include <functional>
 #include <unordered_map>
 #include <unordered_set>
+#include <climits>
 #include <map>
 #include <set>
 #include <exception>
+#include <utility>
 

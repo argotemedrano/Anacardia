@@ -1,10 +1,1 @@
-﻿  SandboxApplication.cpp
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Log.h(17,54): warning C4251: 'Anacardia::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Anacardia::Log'
-C:\Users\joshu\CS104\Game-Engine\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Log.h(18,56): warning C4251: 'Anacardia::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Anacardia::Log'
-C:\Users\joshu\CS104\Game-Engine\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Log.h(28,1): warning C4005: 'ANACARDIA_CORE_ASSERT': macro redefinition
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Core.h(17): message : see previous definition of 'ANACARDIA_CORE_ASSERT'
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(21,35): warning C4251: 'Anacardia::Application::m_Window': class 'std::unique_ptr<Anacardia::Window,std::default_delete<Anacardia::Window>>' needs to have dll-interface to be used by clients of class 'Anacardia::Application'
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(21): message : see declaration of 'std::unique_ptr<Anacardia::Window,std::default_delete<Anacardia::Window>>'
-  Sandbox.vcxproj -> C:\Users\joshu\CS104\Game-Engine\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
+﻿  Sandbox.vcxproj -> C:\Users\joshu\CS104\Game-Engine\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
