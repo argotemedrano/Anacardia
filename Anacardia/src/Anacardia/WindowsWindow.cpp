@@ -10,7 +10,7 @@ namespace Anacardia
 
 	static void GLFWErrorCallback(int errorCode, const char* description)
 	{
-		ANACARDIA_CORE_ERROR("GLFW Error [code {0}]: {1}", errorCode, description);
+		ANACARDIA_CORE_ERROR("[GLFW Error <{0}>]: {1}", errorCode, description);
 	}
 
 	Window* Window::Create(const WindowProps& prop)

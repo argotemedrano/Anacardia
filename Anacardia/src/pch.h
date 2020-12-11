@@ -7,6 +7,10 @@
 	#include <Windows.h>
 #endif
 
+#ifdef ACAR_DEBUG
+#define ANACARDIA_ENABLE_ASSERTS
+#endif
+
 // C++ STL
 #include <fstream>
 #include <iostream>

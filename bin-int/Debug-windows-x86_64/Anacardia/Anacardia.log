@@ -3,17 +3,20 @@ C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Log.h(17,54): warning C
 C:\Users\joshu\CS104\Game-Engine\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Log.h(18,56): warning C4251: 'Anacardia::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Anacardia::Log'
 C:\Users\joshu\CS104\Game-Engine\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Log.h(28,1): warning C4005: 'ANACARDIA_CORE_ASSERT': macro redefinition
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Core.h(17): message : see previous definition of 'ANACARDIA_CORE_ASSERT'
   Application.cpp
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(21,35): warning C4251: 'Anacardia::Application::m_Window': class 'std::unique_ptr<Anacardia::Window,std::default_delete<Anacardia::Window>>' needs to have dll-interface to be used by clients of class 'Anacardia::Application'
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(21): message : see declaration of 'std::unique_ptr<Anacardia::Window,std::default_delete<Anacardia::Window>>'
   Log.cpp
   WindowsWindow.cpp
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(43,4): warning C4551: function call missing argument list
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(74,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(74,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(80,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(80,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Layer.cpp
   LayerStack.cpp
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\LayerStack.cpp(23,10): error C2039: 'SetActive': is not a member of 'Anacardia::Layer'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Layer.h(5): message : see declaration of 'Anacardia::Layer'
   Generating Code...
-     Creating library ..\bin\Debug-windows-x86_64\Anacardia\Anacardia.lib and object ..\bin\Debug-windows-x86_64\Anacardia\Anacardia.exp
-  Anacardia.vcxproj -> C:\Users\joshu\CS104\Game-Engine\Anacardia\..\bin\Debug-windows-x86_64\Anacardia\Anacardia.dll
