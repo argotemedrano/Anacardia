@@ -1,1 +1,11 @@
 .vs
+
+#directories
+**/bin-int/
+**/bin/
+vendor/Glad/bin/
+vendor/Glad/bin-int/
+vendor/GLFW/bin/
+vendor/GLFW/bin-int/
+vendor/imgui/bin/
+vendor/imgui/bin-int/
