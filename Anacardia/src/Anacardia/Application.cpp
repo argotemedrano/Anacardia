@@ -4,9 +4,11 @@
 #include "Events/ApplicationEvent.h"
 #include "Log.h"
 #include <functional>
+#include "Anacardia/ImGui/ImGuiLayer.h"
 
 namespace Anacardia
 {
+	Application* Application::s_Instance = nullptr;
 	Application::Application()
 	{
 		//Anacardia::Log::Init();
@@ -26,6 +28,17 @@ namespace Anacardia
 		while (m_Running)
 		{
 			m_Window->OnUpdate();
+			ImGuiLayer::Begin();
+			/*
+			* No onupdate since all events that modify the objects
+			* work immediately
+			*/
+			for (Layer* layers : m_LayerStack)
+			{
+				layers->OnImGuiRender();
+			}
+
+			ImGuiLayer::End();
 		}
 	}
 

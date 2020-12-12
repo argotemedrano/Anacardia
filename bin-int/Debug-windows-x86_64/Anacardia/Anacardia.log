@@ -1,8 +1,11 @@
-﻿  WindowsWindow.cpp
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(45,4): warning C4551: function call missing argument list
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(81,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(81,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(87,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\WindowsWindow.cpp(87,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+﻿  Application.cpp
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(25,35): warning C4251: 'Anacardia::Application::m_Window': class 'std::unique_ptr<Anacardia::Window,std::default_delete<Anacardia::Window>>' needs to have dll-interface to be used by clients of class 'Anacardia::Application'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(25): message : see declaration of 'std::unique_ptr<Anacardia::Window,std::default_delete<Anacardia::Window>>'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\Application.h(28,26): warning C4251: 'Anacardia::Application::m_LayerStack': class 'Anacardia::LayerStack' needs to have dll-interface to be used by clients of class 'Anacardia::Application'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\LayerStack.h(6): message : see declaration of 'Anacardia::LayerStack'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\ImGui\ImGuiLayer.h(8,2): warning C4275: non dll-interface class 'Anacardia::Layer' used as base for dll-interface class 'Anacardia::ImGuiLayer'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Layer.h(5): message : see declaration of 'Anacardia::Layer'
+C:\Users\joshu\CS104\Game-Engine\Anacardia\src\Anacardia\ImGui\ImGuiLayer.h(7): message : see declaration of 'Anacardia::ImGuiLayer'
      Creating library ..\bin\Debug-windows-x86_64\Anacardia\Anacardia.lib and object ..\bin\Debug-windows-x86_64\Anacardia\Anacardia.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Anacardia.vcxproj -> C:\Users\joshu\CS104\Game-Engine\Anacardia\..\bin\Debug-windows-x86_64\Anacardia\Anacardia.dll

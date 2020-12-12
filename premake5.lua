@@ -57,6 +57,11 @@ project "Anacardia"
 		"Glad"
 	}
 
+	defines
+	{
+		"GLFW_INCLUDE_NONE"
+	}
+
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
@@ -102,7 +107,8 @@ project "Sandbox"
 	includedirs
 	{
 		"vendor/spdlog/include",
-		"Anacardia/src"
+		"Anacardia/src",
+		"Platform/Windows"
 	}
 
 	links

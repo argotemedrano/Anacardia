@@ -8,8 +8,6 @@ namespace Anacardia
 {
 	static bool s_GLFWInitialized = false;
 
-	GLFWwindow* WindowsWindow::m_Window = nullptr;
-
 	static void GLFWErrorCallback(int errorCode, const char* description)
 	{
 		ANACARDIA_CORE_ERROR("[GLFW Error <{0}>]: {1}", errorCode, description);
@@ -47,11 +45,6 @@ namespace Anacardia
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
 
-		if (m_Window != nullptr)
-		{
-			ANACARDIA_ERROR("Window already created!");
-			return;
-		}
 		m_Window = glfwCreateWindow((int)m_Data.Width, (int)m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
@@ -171,11 +164,6 @@ namespace Anacardia
 	void WindowsWindow::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
-	}
-
-	void* Window::GetNativeWindow()
-	{
-		return WindowsWindow::GetNativeWindow();
 	}
 
 	void* WindowsWindow::GetNativeWindow()

@@ -19,14 +19,14 @@ namespace Anacardia
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 
-		static void* GetNativeWindow();
+		void* GetNativeWindow() override;
 
 		static Window* Create(const WindowProps& props = WindowProps());
 	private:
 		void Init(const WindowProps& props);
 		void Shutdown();
 
-		static GLFWwindow* m_Window;
+		GLFWwindow* m_Window;
 
 		struct WindowData
 		{

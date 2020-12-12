@@ -9,6 +9,7 @@ int main(int argc, char* argv[])
 {
 	Anacardia::Log::Init();
 	Anacardia::Application* app = Anacardia::CreateApplication();
+	app->SetInstance(app);
 	app->Run();
 	delete app;
 }

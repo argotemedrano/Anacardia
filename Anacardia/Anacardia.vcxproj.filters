@@ -7,6 +7,9 @@
     <Filter Include="Anacardia\Events">
       <UniqueIdentifier>{1D4123C0-093A-4212-326C-27971EC4211E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Anacardia\ImGui">
+      <UniqueIdentifier>{43C74BDF-AF52-B9A3-B863-3C98246E15A4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Anacardia.h" />
@@ -28,6 +31,12 @@
     <ClInclude Include="src\Anacardia\Events\MouseEvent.h">
       <Filter>Anacardia\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Anacardia\ImGui\ImGuiLayer.h">
+      <Filter>Anacardia\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Anacardia\Input.h">
+      <Filter>Anacardia</Filter>
+    </ClInclude>
     <ClInclude Include="src\Anacardia\Log.h">
       <Filter>Anacardia</Filter>
     </ClInclude>
@@ -38,17 +47,22 @@
       <Filter>Anacardia</Filter>
     </ClInclude>
     <ClInclude Include="src\Core.h" />
+    <ClInclude Include="src\KeyCodes.h" />
     <ClInclude Include="src\Layer.h" />
     <ClInclude Include="src\LayerStack.h" />
-    <ClInclude Include="src\pch.h" />
-    <ClInclude Include="src\Anacardia\Input.h" />
-    <ClInclude Include="src\KeyCodes.h" />
     <ClInclude Include="src\MouseButtonCodes.h" />
-    <ClInclude Include="WindowsInput.h" />
+    <ClInclude Include="src\WindowsInput.h" />
+    <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Anacardia\Application.cpp">
       <Filter>Anacardia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Anacardia\ImGui\ImGuiBuild.cpp">
+      <Filter>Anacardia\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Anacardia\ImGui\ImGuiLayer.cpp">
+      <Filter>Anacardia\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Anacardia\Log.cpp">
       <Filter>Anacardia</Filter>
@@ -58,7 +72,7 @@
     </ClCompile>
     <ClCompile Include="src\Layer.cpp" />
     <ClCompile Include="src\LayerStack.cpp" />
+    <ClCompile Include="src\WindowsInput.cpp" />
     <ClCompile Include="src\pch.cpp" />
-    <ClCompile Include="WindowsInput.cpp" />
   </ItemGroup>
 </Project>
